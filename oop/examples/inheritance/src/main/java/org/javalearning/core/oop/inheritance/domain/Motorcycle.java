@@ -1,4 +1,4 @@
-package org.javalearning.core.oop.inheritance.basic;
+package org.javalearning.core.oop.inheritance.domain;
 
 /**
  * Represents a specialized vehicle type implementing motorcycle-specific attributes and behaviors.
@@ -31,8 +31,8 @@ package org.javalearning.core.oop.inheritance.basic;
  * </ul>
  *
  * @author Logic Luminary
- * @version 1.0
- * @since 1.0
+ * @version 1.2
+ * @since 1.2
  */
 public class Motorcycle extends Vehicle {
     private final boolean hasSideCar;
@@ -68,6 +68,32 @@ public class Motorcycle extends Vehicle {
      */
     public boolean getHasSideCar() {
         return hasSideCar;
+    }
+
+    /**
+     * Overrides the base startEngineViaButton method to provide motorcycle-specific button start behavior.
+     * Simulates a motorcycle-specific button press detection and engine start sequence.
+     *
+     * @return true if the motorcycle engine started with the button, false otherwise
+     */
+    @Override
+    public boolean startEngineViaButton() {
+        boolean motorcycleButtonPressed = true; // Replace with motorcycle-specific button press detection
+        boolean engineReady = true; // Replace with motorcycle-specific engine readiness check
+        return motorcycleButtonPressed && engineReady;
+    }
+
+    /**
+     * Overrides the base startEngineViaManualCrank method to provide motorcycle-specific kick start behavior.
+     * Simulates a motorcycle-specific kick operation and engine start sequence.
+     *
+     * @return true if the motorcycle engine started with a kick, false otherwise
+     */
+    @Override
+    public boolean startEngineViaManualCrank() {
+        boolean kickOperated = true; // Replace with motorcycle-specific kick operation detection
+        boolean engineReady = true; // Replace with motorcycle-specific engine readiness check
+        return kickOperated && engineReady;
     }
 
     /**
